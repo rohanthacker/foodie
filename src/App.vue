@@ -1,7 +1,9 @@
 <template>
   <article id="app">
     <section>
-      <router-view/>
+      <transition name="fade" mode="out-in">
+        <router-view/>
+      </transition>
     </section>
   </article>
 </template>
@@ -12,34 +14,6 @@ export default {
 };
 </script>
 
-<style>
-html,
-body {
-  margin: 0;
-  background-color: #222;
-  color: white;
-}
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-.card {
-  margin: 0.5rem;
-  background-color: #333;
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: flex-start;
-}
+<style lang="scss">
+@import "./styles/main.scss";
 </style>
